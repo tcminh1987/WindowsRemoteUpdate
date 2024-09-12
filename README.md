@@ -1,3 +1,41 @@
+
+
+C:\Windows\system32> **Install-Module -Name PSWindowsUpdate**
+C:\Windows\system32> **enable-WUremoting**
+C:\Windows\system32> **winrm quickconfig**
+WinRM service is already running on this machine.
+WinRM is already set up for remote management on this computer.
+C:\Windows\system32>      **Get-WUSettings**
+ComputerName              : WEB05
+WUServer                  : http://WEB05:8530
+WUStatusServer            : http://WEB05:8530
+UseWUServer               : 1
+IncludeRecommendedUpdates : 1
+NoAutoUpdate              : 0
+AUOptions                 : 2 - Notify before download
+ScheduledInstallDay       : 0 - Every Day
+ScheduledInstallTime      : 3
+
+**C:\Windows\system32> Get-WUHistory -ComputerName localhost**
+ComputerName Operationname  Result     Date                Title
+------------ -------------  ------     ----                -----
+localhost    Installation   Succeeded  11/09/2024 2:00:... Windows Malicious Software Removal Tool x64 - v5.128 (KB8...
+localhost    Installation   Succeeded  11/09/2024 1:52:... 2024-09 Cumulative Update for Windows Server 2019 (1809)
+
+
+**Get-WUList -ComputerName WEB05**
+ComputerName Status     KB          Size Title
+------------ ------     --          ---- -----
+WEB05 -------    KB890830    71MB Windows Malicious Software Removal Tool x64 - v5.127 (KB890830)
+WEB05 -------    KB5043050  659MB 2024-09 Cumulative Update for Windows Server 2019 for x64-based Systems (KB5043050)
+WEB05 -------    KB2267602    1GB Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.417.643.0)
+
+
+
+https://woshub.com/pswindowsupdate-module/
+
+
+##############################
 RemoteUpdate uses the Powershell Module <a href="https://www.powershellgallery.com/packages/PSWindowsUpdate" target="_blank">PSWindowsUpdate</a> to install Windows Updates on Remote Hosts without the need of scheduled jobs (like described <a href="http://woshub.com/pswindowsupdate-module/" target="_blank">here</a>)
 
 <p align="center">
