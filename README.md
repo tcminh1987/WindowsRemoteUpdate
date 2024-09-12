@@ -33,6 +33,7 @@ WEB05 -------    KB2267602    1GB Security Intelligence Update for Microsoft Def
 
 
 https://woshub.com/pswindowsupdate-module/
+![image](https://github.com/user-attachments/assets/278d0950-1e22-41ca-a4b4-69d36b1bab1c)
 
 
 ##############################
