@@ -35,6 +35,8 @@ WEB05 -------    KB2267602    1GB Security Intelligence Update for Microsoft Def
 https://woshub.com/pswindowsupdate-module/
 ![image](https://github.com/user-attachments/assets/278d0950-1e22-41ca-a4b4-69d36b1bab1c)
 
+you just have to modify the Get-WindowsUpdate -AcceptAll -Install to Get-WindowsUpdate -KBArticleID KB890830 -install and change the -KBArticleID to whatever KB you want to install.
+So the syntax would look like: Get-WindowsUpdate -KBArticleID KB890830 -install
 
 ##############################
 RemoteUpdate uses the Powershell Module <a href="https://www.powershellgallery.com/packages/PSWindowsUpdate" target="_blank">PSWindowsUpdate</a> to install Windows Updates on Remote Hosts without the need of scheduled jobs (like described <a href="http://woshub.com/pswindowsupdate-module/" target="_blank">here</a>)
