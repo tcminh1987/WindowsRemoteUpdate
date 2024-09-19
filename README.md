@@ -1,4 +1,7 @@
 
+Test-WsMan <Target IP>
+This simple command tests whether the WinRM service is running on the remote Host. If it completes successfully, you’ll see information about the remote Host's WinRM service in the window—signifying that WinRM is enabled and your <Target Host> can communicate. If the command fails, you’ll see an error message instead. 
+![Pasted image](https://github.com/user-attachments/assets/034c90ce-92b9-4d55-8ab8-f1a76545f65b)
 
 C:\Windows\system32> **Install-Module -Name PSWindowsUpdate**
 C:\Windows\system32> **enable-WUremoting**
